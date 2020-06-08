@@ -20,6 +20,12 @@ namespace Calculator_Game_UI
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Declare properties for generating random numbers 
+        private Random Rand { get; set; } = new Random();
+        private int RandomInt { get; set; }
+
+        private int Total { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -29,17 +35,37 @@ namespace Calculator_Game_UI
         private void Start(object sender, RoutedEventArgs e)
         {
             //Enable check Button
+            btnCheck.IsEnabled = true;
+
+            //Clean Answer section
+            lblAnswer.Content = "";
+
+            //set every textbox content to 0
+            foreach (var item in mainGrid.Children.OfType<TextBox>())
+            {
+                item.Text = "0";
+            }
+
+            //Generate random number
+            //Max is 511 due to text boxes are limited 
+            RandomInt = Rand.Next(0, 511);
+
+            //Ask a Question from user
+            tbxQuestion.Content = $"What is { RandomInt} in binary?";
+
         }
 
         private void Help(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("help clicked");
+            string helpMessage = $"I am too lazy to write instruction for the user. Sorry...";
+            string title = "Help Needed?";
+            MessageBox.Show(helpMessage, title);
 
         }
 
         private void Check(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("check clicked");
+            
         }
     }
 }

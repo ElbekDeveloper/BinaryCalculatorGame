@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Calculator_Game_UI"
         mc:Ignorable="d"
         Title="" MinHeight="400" MinWidth="600" Height="450" Width="800">
-    <Grid>
+    <Grid Name="mainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="2*"></RowDefinition>
@@ -50,8 +50,8 @@
         <TextBox Background="LightSeaGreen" Grid.Row="1" Grid.Column="8" MaxLength="1" Tag="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="15 15 15 15">0</TextBox>
 
 
-        <Label Grid.Row="1" Grid.Column="2"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="5" FontSize="22" Foreground="Green">Question</Label>
-        <Label Grid.Row="2" Grid.Column="2"  VerticalAlignment="Top" HorizontalAlignment="Center" Grid.ColumnSpan="5" FontSize="22" Foreground="Green">Answer</Label>
+        <Label Name="tbxQuestion" Grid.Row="1" Grid.Column="2"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="5" FontSize="22" Foreground="Green">Question appears here...</Label>
+        <Label Name="lblAnswer" Grid.Row="2" Grid.Column="2"  VerticalAlignment="Top" HorizontalAlignment="Center" Grid.ColumnSpan="5" FontSize="22" Foreground="Green">Answer pops up here...</Label>
         <Button Name="btnCheck" Click="Check" Grid.Row="2" Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="5" FontSize="18" Padding="20 10 20 10">Check!</Button>
         <Label Grid.Row="2" Grid.Column="4"  VerticalAlignment="Bottom" HorizontalAlignment="Center"  FontSize="12" Foreground="Green">Made by Elbek</Label>
 
