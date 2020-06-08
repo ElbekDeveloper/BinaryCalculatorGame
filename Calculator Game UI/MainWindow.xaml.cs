@@ -51,7 +51,7 @@ namespace Calculator_Game_UI
             RandomInt = Rand.Next(0, 511);
 
             //Ask a Question from user
-            tbxQuestion.Content = $"What is { RandomInt} in binary?";
+            lblQuestion.Content = $"What is { RandomInt} in binary?";
 
         }
 
@@ -65,7 +65,33 @@ namespace Calculator_Game_UI
 
         private void Check(object sender, RoutedEventArgs e)
         {
-            
+            Total = 0;
+
+
+            //loop through the textboxes on by one 
+            foreach (var item in mainGrid.Children.OfType<TextBox>())
+            {
+                //check if this is one 
+                if (item.Text == "1")
+                {
+                    Total += Convert.ToInt32(item.Tag);
+                }
+
+                //write in the answer section 
+                lblAnswer.Content += item.Text;
+
+            }
+            //check if the answer is correct 
+            if (Total == RandomInt)
+            {
+                lblAnswer.Content += " is correct!";
+                btnCheck.IsEnabled = false;
+            }
+            else
+            {
+                lblAnswer.Content += " is incorrect!";
+                btnCheck.IsEnabled = true;
+            }
         }
     }
 }
