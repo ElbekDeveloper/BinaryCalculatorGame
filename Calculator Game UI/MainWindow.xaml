@@ -1,0 +1,61 @@
+﻿<Window x:Class="Calculator_Game_UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator_Game_UI"
+        mc:Ignorable="d"
+        Title="" MinHeight="400" MinWidth="600" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" FontSize="24">Binary Calculator Game</Label>
+
+        <Button Click="Start" Background="LightGreen" Grid.Column="8" Grid.Row="0" FontSize="12" VerticalAlignment="Top" Margin="2 20 10 2">Start</Button>
+        <Button Click="Help" Grid.Column="8" Grid.Row="0" FontSize="12" VerticalAlignment="Top" Margin="2 50 10 2">Help</Button>
+
+        <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontSize="14">256</Label>
+        <Label Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontSize="14">128</Label>
+        <Label Grid.Row="1" Grid.Column="2" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontSize="14">64</Label>
+        <Label Grid.Row="1" Grid.Column="3" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontSize="14">32</Label>
+        <Label Grid.Row="1" Grid.Column="4" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontSize="14">16</Label>
+        <Label Grid.Row="1" Grid.Column="5" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontSize="14">8</Label>
+        <Label Grid.Row="1" Grid.Column="6" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontSize="14">4</Label>
+        <Label Grid.Row="1" Grid.Column="7" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontSize="14">2</Label>
+        <Label Grid.Row="1" Grid.Column="8" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontSize="14">1</Label>
+
+        <TextBox Background="LightBlue" Grid.Row="1" Grid.Column="0" MaxLength="1" Tag="256" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10 10 10 10">0</TextBox>
+        <TextBox Background="LightCoral" Grid.Row="1" Grid.Column="1" MaxLength="1" Tag="128" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10 10 10 10">0</TextBox>
+        <TextBox Background="LightCyan" Grid.Row="1" Grid.Column="2" MaxLength="1" Tag="64" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10 10 10 10">0</TextBox>
+        <TextBox Background="LightGoldenrodYellow" Grid.Row="1" Grid.Column="3" MaxLength="1" Tag="32" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10 10 10 10">0</TextBox>
+        <TextBox Background="LightGray" Grid.Row="1" Grid.Column="4" MaxLength="1" Tag="16" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10 10 10 10">0</TextBox>
+        <TextBox Background="LightGreen" Grid.Row="1" Grid.Column="5" MaxLength="1" Tag="8" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10 10 10 10">0</TextBox>
+        <TextBox Background="LightPink" Grid.Row="1" Grid.Column="6" MaxLength="1" Tag="4" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10 10 10 10">0</TextBox>
+        <TextBox Background="LightSalmon" Grid.Row="1" Grid.Column="7" MaxLength="1" Tag="2" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10 10 10 10">0</TextBox>
+        <TextBox Background="LightSeaGreen" Grid.Row="1" Grid.Column="8" MaxLength="1" Tag="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10 10 10 10">0</TextBox>
+
+
+        <Label Grid.Row="1" Grid.Column="2"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="5" FontSize="22" Foreground="Green">Question</Label>
+        <Label Grid.Row="2" Grid.Column="2"  VerticalAlignment="Top" HorizontalAlignment="Center" Grid.ColumnSpan="5" FontSize="22" Foreground="Green">Answer</Label>
+        <Button Click="Check" Grid.Row="2" Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="5" FontSize="18" Padding="20 10 20 10">Check!</Button>
+        <Label Grid.Row="2" Grid.Column="4"  VerticalAlignment="Bottom" HorizontalAlignment="Center"  FontSize="12" Foreground="Green">Made by Elbek</Label>
+
+
+
+    </Grid>
+</Window>
