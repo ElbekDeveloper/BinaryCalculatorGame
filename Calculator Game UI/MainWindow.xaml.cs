@@ -23,11 +23,12 @@ namespace Calculator_Game_UI
         public MainWindow()
         {
             InitializeComponent();
+            btnCheck.IsEnabled = false;
         }
 
         private void Start(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("start clicked");
+            //Enable check Button
         }
 
         private void Help(object sender, RoutedEventArgs e)
